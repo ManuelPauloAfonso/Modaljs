@@ -1,18 +1,17 @@
 
-const botaoabrir = document.querySelector('[data-modal] = "modal1"');
-const botaofechar = document.querySelector('[data-modal] = "fechar"');
-const containermodal = document.querySelector('[data-modal] = "container"');
+const modal = document.querySelector('.modal-container');
+const botaonAbrir = document.querySelector('.login-buttom');
+const botaoFechar = document.querySelector('.fechar');
 
 function abrirModal(event) {
     event.preventDefault();
-    containermodal.classList.add('ativo');
-    
-
+    modal.classList.add('ativo', 'modal');
 }
+
 function fecharModal(event){
     event.preventDefault();
-    containermodal.classList.remove('ativo');
-
+    modal.classList.remove('ativo');
 }
-botaoabrir.addEventListener('click', abrirModal());
-botaofechar.addEventListener('click', fecharModal());
+
+botaoFechar.addEventListener('click', fecharModal);
+botaonAbrir.addEventListener('click', abrirModal);
